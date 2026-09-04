@@ -1,0 +1,16 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+kpt_shape: [5, 3]
+flip_idx: [0, 1, 2, 3, 4]
+
+nc: 1
+names: ['keypoints']
+
+roboflow:
+  workspace: yukthika
+  project: cow-udder-side-view
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/yukthika/cow-udder-side-view/dataset/1
