@@ -1,0 +1,52 @@
+# Cow Udder Classification Dataset Configuration
+# Compatible with YOLOv8 and other PyTorch-based frameworks
+
+path: cow_udder_classification
+train: train
+val: valid
+test: test
+
+# Number of classes
+nc: 2
+
+# Class names
+names:
+  0: diseased
+  1: normal
+
+# Dataset statistics
+train_images: 210
+val_images: 35
+test_images: 24
+total_images: 269
+
+# Class distribution
+train_distribution:
+  normal: 80
+  diseased: 130
+  ratio: 1.62
+
+val_distribution:
+  normal: 10
+  diseased: 25
+  ratio: 2.5
+
+test_distribution:
+  normal: 10
+  diseased: 14
+  ratio: 1.4
+
+# Data source information
+sources:
+  normal: ["normal1 (50 images)", "normal2 (50 images)"]
+  diseased: ["mastatis (169 images)"]
+
+# Recommended model parameters
+recommended_config:
+  imgsz: 640
+  batch_size: 32
+  epochs: 100
+  optimizer: SGD
+  lr0: 0.01
+  weight_decay: 0.0005
+  patience: 20
